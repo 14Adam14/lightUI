@@ -4,20 +4,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 35.0) {
-            Spacer()
+        VStack(spacing: 90) {
+
             
-          Circle()
-                .frame(width: 150, height: 150)
-                .foregroundColor(.red)
-          Circle()
-                  .frame(width: 150, height: 150)
-                  .foregroundColor(.yellow)
-          Circle()
-                  .frame(width: 150, height: 150)
-                  .foregroundColor(.green)
+            VStack(spacing: 30) {
+                Circle()
+                    .frame(width: 150, height: 150)
+                    .foregroundColor(.red)
+                Circle()
+                        .frame(width: 150, height: 150)
+                        .foregroundColor(.yellow)
+                Circle()
+                        .frame(width: 150, height: 150)
+                        .foregroundColor(.green)
+            }
+         
             
-            Spacer()
             
             Button {
                 //
@@ -29,12 +31,8 @@ struct ContentView: View {
                         .overlay(RoundedRectangle(cornerRadius: 25)
                                     .frame(width: 120, height: 80)
                                     .foregroundColor(.gray))
-                    
-                                        
-               
             }
-           
-            Spacer()
+
         }
     }
 }
