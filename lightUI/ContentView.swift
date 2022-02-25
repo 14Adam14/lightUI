@@ -2,11 +2,21 @@
 import SwiftUI
 
 
+
+
+
 struct ContentView: View {
+    
+    @State var shadowToggle: Bool = false
+    
+    
+    
+    
+    
     var body: some View {
         
         ZStack {
-           Rectangle()
+            Rectangle()
                 .background(Color.black)
                 .ignoresSafeArea()
             
@@ -21,41 +31,48 @@ struct ContentView: View {
                         .shadow(color: .red, radius: 11)
                     
                     Circle()
-                            .frame(width: 150, height: 150)
-                            .foregroundColor(.yellow)
-                            .blur(radius: 2)
-                            .shadow(color: .yellow, radius: 0)
-
-                            .opacity(0.1)
+                        .frame(width: 150, height: 150)
+                        .foregroundColor(.yellow)
+                        .blur(radius: 2)
+                        .shadow(color: .yellow, radius: 0)
+                    
+                        .opacity(0.1)
                     
                     Circle()
-                            .frame(width: 150, height: 150)
-                            .foregroundColor(.green)
-                            .blur(radius: 2)
-                            .shadow(color: .green, radius: 0)    // radius 11
+                        .frame(width: 150, height: 150)
+                        .foregroundColor(.green)
+                        .blur(radius: 2)
+                        .shadow(color: .green, radius: 0)    // radius 11
                     
-                            .opacity(0.1)
+                        .opacity(0.1)
                 }
-             
+                
                 
                 
                 Button {
-                    //
+                    pr()
                 } label: {
-                   
-                        RoundedRectangle(cornerRadius: 35)
-                            .frame(width: 170, height: 115)
-                            .foregroundColor(.orange)
-                            .overlay(RoundedRectangle(cornerRadius: 25)
-                                        .frame(width: 120, height: 80)
-                                        .foregroundColor(.gray))
+                    
+                    RoundedRectangle(cornerRadius: 35)
+                        .frame(width: 170, height: 115)
+                        .foregroundColor(.orange)
+                        .overlay(RoundedRectangle(cornerRadius: 25)
+                                    .frame(width: 120, height: 80)
+                                    .foregroundColor(.gray))
                 }
-
+                
             }
         }
-        
-       
     }
+    
+    
+    func pr() {
+        print("fdwsfw")
+    }
+    
+    
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
