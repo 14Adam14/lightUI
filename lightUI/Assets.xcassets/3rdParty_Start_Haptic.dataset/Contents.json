@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "3rdParty_Start_Haptic.caf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

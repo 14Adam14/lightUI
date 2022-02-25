@@ -1,8 +1,9 @@
 
 import SwiftUI
+import AVFoundation
 
 
-
+var player: AVAudioPlayer!
 
 
 struct ContentView: View {
@@ -81,12 +82,15 @@ struct ContentView: View {
                 Button {
                     switchColors()
                     self.generator.notificationOccurred(.success)
+                    playSound()
+           
+                    
                 } label: {
                     
                     RoundedRectangle(cornerRadius: 35)
                         .frame(width: 170, height: 115)
                         .foregroundColor(.purple)
-                        .shadow(color: .purple, radius: 10)
+                        .shadow(color: .purple, radius: 5)
                         .overlay(RoundedRectangle(cornerRadius: 25)
                                     .frame(width: 120, height: 80)
                                     .foregroundColor(.black))
@@ -96,6 +100,30 @@ struct ContentView: View {
             }
         }
     }
+    
+    
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "3rdParty_Start_Haptic", withExtension: "caf")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+            
+        } catch {
+            print("play error \(error)")
+        }
+        
+    }
+    
+    
+    
+    
+    
     
     
     func switchColors() {
