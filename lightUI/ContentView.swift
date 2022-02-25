@@ -15,16 +15,16 @@ struct ContentView: View {
     @State var greenLightOpacity: Double = 0.1
     @State var yellowLightOpacity: Double = 0.1
     
-    
+    let generator = UINotificationFeedbackGenerator()
     
     /*
      
-     посмотреть как будет если выключать и блюр тоже
+     
+    
      
      убрать логику и тд из тела и возможно в отдельный файл
      
-     
-     добавить таптик при клике
+    
      
      добавить звук при клике
      
@@ -80,14 +80,17 @@ struct ContentView: View {
                 
                 Button {
                     switchColors()
+                    self.generator.notificationOccurred(.success)
                 } label: {
                     
                     RoundedRectangle(cornerRadius: 35)
                         .frame(width: 170, height: 115)
-                        .foregroundColor(.orange)
+                        .foregroundColor(.purple)
+                        .shadow(color: .purple, radius: 10)
                         .overlay(RoundedRectangle(cornerRadius: 25)
                                     .frame(width: 120, height: 80)
-                                    .foregroundColor(.gray))
+                                    .foregroundColor(.black))
+                        .shadow(color: .black, radius: 5)
                 }
                 
             }
