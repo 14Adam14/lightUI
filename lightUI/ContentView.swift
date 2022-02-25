@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var yellowLightShadow: Double = 0
     @State var greenLightShadow: Double = 0
     
-    @State  var redLightOpacity: Double = 0.1
+    @State var redLightOpacity: Double = 0.1
     @State var greenLightOpacity: Double = 0.1
     @State var yellowLightOpacity: Double = 0.1
     
@@ -83,10 +83,10 @@ struct ContentView: View {
                 
                 
                 Button {
+                    
                     switchColors()
                     self.generator.notificationOccurred(.success)
                     playSound()
-                    
                     
                 } label: {
                     
@@ -104,9 +104,6 @@ struct ContentView: View {
             }
         }
     }
-    
-    
-    
     
     
     func switchColors() {
@@ -165,6 +162,8 @@ struct ContentView: View {
         
     }
 }
+    
+    
 
 
 struct ContentView_Previews: PreviewProvider {

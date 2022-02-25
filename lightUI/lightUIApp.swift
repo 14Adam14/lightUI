@@ -1,9 +1,4 @@
-//
-//  lightUIApp.swift
-//  lightUI
-//
-//  Created by user213083 on 2/24/22.
-//
+
 
 import SwiftUI
 
