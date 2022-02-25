@@ -18,7 +18,7 @@
 		1025E19827C7377E001AD6EA /* lightUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lightUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1025E19B27C7377E001AD6EA /* lightUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lightUIApp.swift; sourceTree = "<group>"; };
 		1025E19D27C7377E001AD6EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1025E19F27C7377F001AD6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1025E19F27C7377F001AD6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = lightUI/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		1025E1A227C7377F001AD6EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10E39F4527C8E4E800F8117C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
