@@ -8,6 +8,12 @@ var player: AVAudioPlayer!
 
 struct ContentView: View {
     
+//    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+//    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+    
+    
+    
+    
     @State var redLightShadow: Double = 0
     @State var yellowLightShadow: Double = 0
     @State var greenLightShadow: Double = 0
@@ -54,7 +60,7 @@ struct ContentView: View {
                     
                     
                     Circle()
-                        .frame(width: 150, height: 150)
+                        .frame(minWidth: 50, idealWidth: 150, maxWidth: 160, minHeight: 50, idealHeight: 150, maxHeight: 160)
                         .foregroundColor(.red)
                         .blur(radius: 2)
                         .shadow(color: .red, radius: redLightShadow)
@@ -62,7 +68,7 @@ struct ContentView: View {
                     
                     
                     Circle()
-                        .frame(width: 150, height: 150)
+                        .frame(minWidth: 50, idealWidth: 150, maxWidth: 160, minHeight: 50, idealHeight: 150, maxHeight: 160)
                         .foregroundColor(.yellow)
                         .blur(radius: 2)
                         .shadow(color: .yellow, radius: yellowLightShadow)
@@ -70,7 +76,7 @@ struct ContentView: View {
                     
                     
                     Circle()
-                        .frame(width: 150, height: 150)
+                        .frame(minWidth: 50, idealWidth: 150, maxWidth: 160, minHeight: 50, idealHeight: 150, maxHeight: 160)
                         .foregroundColor(.green)
                         .blur(radius: 2)
                         .shadow(color: .green, radius: greenLightShadow)    // radius 11
@@ -89,18 +95,20 @@ struct ContentView: View {
                 } label: {
                     
                     RoundedRectangle(cornerRadius: 35)
-                        .frame(width: 170, height: 115)
+                        .frame(minWidth: 100, idealWidth: 170, maxWidth: 175, minHeight: 45, idealHeight: 115, maxHeight: 120)
                         .foregroundColor(Color("buttonPurp"))
                         .shadow(color: (Color("buttonPurp")), radius: 5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 25)
-                                    .frame(width: 120, height: 80)
+                                    .frame(minWidth: 90, idealWidth: 120, maxWidth: 125, minHeight: 50, idealHeight: 80, maxHeight: 85)
                                     .foregroundColor(.black))
                         .shadow(color: .black, radius: 5)
                 }
                 
+                
             }
         }
+        
     }
     
     
@@ -167,6 +175,9 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+//            .previewDevice("iPhone 13")
+//        ContentView()
+//            .previewDevice("iPhone 8")
     }
 }
 
