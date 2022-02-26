@@ -54,6 +54,8 @@ struct ContentView: View {
                 .background(Color.black)
                 .ignoresSafeArea()
             
+                
+            
             VStack(spacing: 90) {
                 
                 VStack(spacing: 30) {
@@ -94,20 +96,44 @@ struct ContentView: View {
                     
                 } label: {
                     
-                    RoundedRectangle(cornerRadius: 35)
-                        .frame(minWidth: 100, idealWidth: 170, maxWidth: 175, minHeight: 45, idealHeight: 115, maxHeight: 120)
-                        .foregroundColor(Color("buttonPurp"))
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 35)
+                            .frame(
+                                minWidth: 100,
+                                idealWidth: 170,
+                                maxWidth: 175,
+                                minHeight: 45,
+                                idealHeight: 115,
+                                maxHeight: 120
+                              
+                            )
+                            .foregroundColor(Color("buttonPurp"))
                         .shadow(color: (Color("buttonPurp")), radius: 5)
-                        .overlay(
+                    
+                        
                             RoundedRectangle(cornerRadius: 25)
-                                    .frame(minWidth: 90, idealWidth: 120, maxWidth: 125, minHeight: 50, idealHeight: 80, maxHeight: 85)
-                                    .foregroundColor(.black))
-                        .shadow(color: .black, radius: 5)
+                                    .frame(
+                                        minWidth: 90,
+                                        idealWidth: 120,
+                                        maxWidth: 125,
+                                        minHeight: 50,
+                                        idealHeight: 80,
+                                        maxHeight: 85
+                                        
+                                      
+                                    )
+                                    .foregroundColor(.black)
+                                    .shadow(color: .black, radius: 5)
+                                    
+                    }
+                    .padding(.bottom, 30)
+                    
                 }
                 
                 
             }
         }
+   
         
     }
     
@@ -175,9 +201,9 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .previewDevice("iPhone 13")
-//        ContentView()
-//            .previewDevice("iPhone 8")
+            .previewDevice("iPhone 13")
+        ContentView()
+            .previewDevice("iPhone 8")
     }
 }
 
