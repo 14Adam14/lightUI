@@ -19,12 +19,10 @@ struct ContentView: View {
     let generator = UINotificationFeedbackGenerator()
     
     
-    
-    let butCol: Color = Color(red: 0.6, green: 0.5647058823529412, blue: 0.7294117647058823)
-    
     /*
      
      
+     скорректировать верстку что бы адаптировалась под айфон 7,8
      
      
      убрать логику и тд из тела и возможно в отдельный файл
@@ -92,8 +90,8 @@ struct ContentView: View {
                     
                     RoundedRectangle(cornerRadius: 35)
                         .frame(width: 170, height: 115)
-                        .foregroundColor(butCol)
-                        .shadow(color: butCol, radius: 5)
+                        .foregroundColor(Color("buttonPurp"))
+                        .shadow(color: (Color("buttonPurp")), radius: 5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 25)
                                     .frame(width: 120, height: 80)
