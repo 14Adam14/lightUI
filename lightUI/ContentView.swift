@@ -56,7 +56,7 @@ struct ContentView: View {
             
                 
             
-            VStack(spacing: 90) {
+            VStack(spacing: 30) {
                 
                 VStack(spacing: 30) {
                     
