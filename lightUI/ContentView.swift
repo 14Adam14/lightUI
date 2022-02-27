@@ -51,15 +51,13 @@ struct ContentView: View {
         
         ZStack {
             Rectangle()
-                .background(Color.black)
+                
                 .ignoresSafeArea()
             
                 
             
             VStack(spacing: 30) {
-                
-                VStack(spacing: 30) {
-                    
+            
                     
                     Circle()
                         .frame(minWidth: 50, idealWidth: 150, maxWidth: 160, minHeight: 50, idealHeight: 150, maxHeight: 160)
@@ -84,7 +82,7 @@ struct ContentView: View {
                         .shadow(color: .green, radius: greenLightShadow)    // radius 11
                         .opacity(greenLightOpacity)
                     
-                }
+                
                 
                 
                 
@@ -111,16 +109,16 @@ struct ContentView: View {
                                 maxHeight: 120
                               
                             )
-                          
-                    
                         
+                            
+  
                         RoundedRectangle(cornerRadius: 25)
                         //   Rectangle()
                             .foregroundColor(.black)
                             .shadow(color: .black, radius: 5)
                      
                                     .frame(
-                                        minWidth: 90,
+                                        minWidth: 80,
                                         idealWidth: 120,
                                         maxWidth: 125,
                                         minHeight: 50,
@@ -129,18 +127,21 @@ struct ContentView: View {
                                         
                                       
                                     )
-                                   
+                                    .aspectRatio(contentMode: .fit)
                                     
                                     
                     }
-                    .padding(.bottom, 30)
-                    
+                    .padding()
+                    .aspectRatio(contentMode: .fit)
                 }
+                    
+                
                 
                 
             }
+            
         }
-   
+        
         
     }
     
