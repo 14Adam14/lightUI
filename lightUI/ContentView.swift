@@ -98,6 +98,10 @@ struct ContentView: View {
                     
                     ZStack {
                         RoundedRectangle(cornerRadius: 35)
+                      //  Rectangle()
+                            .foregroundColor(Color("buttonPurp"))
+                            .shadow(color: (Color("buttonPurp")), radius: 5)
+                           
                             .frame(
                                 minWidth: 100,
                                 idealWidth: 170,
@@ -107,11 +111,14 @@ struct ContentView: View {
                                 maxHeight: 120
                               
                             )
-                            .foregroundColor(Color("buttonPurp"))
-                        .shadow(color: (Color("buttonPurp")), radius: 5)
+                          
                     
                         
-                            RoundedRectangle(cornerRadius: 25)
+                        RoundedRectangle(cornerRadius: 25)
+                        //   Rectangle()
+                            .foregroundColor(.black)
+                            .shadow(color: .black, radius: 5)
+                     
                                     .frame(
                                         minWidth: 90,
                                         idealWidth: 120,
@@ -122,8 +129,8 @@ struct ContentView: View {
                                         
                                       
                                     )
-                                    .foregroundColor(.black)
-                                    .shadow(color: .black, radius: 5)
+                                   
+                                    
                                     
                     }
                     .padding(.bottom, 30)
@@ -202,6 +209,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewDevice("iPhone 13")
+        ContentView()
+            .previewDevice("iPhone 11")
         ContentView()
             .previewDevice("iPhone 8")
     }
