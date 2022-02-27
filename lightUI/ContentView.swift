@@ -211,8 +211,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .previewDevice("iPhone 13")
         ContentView()
-            .previewDevice("iPhone 11")
-        ContentView()
             .previewDevice("iPhone 8")
     }
 }
